@@ -16,35 +16,35 @@ function promises() {
     })
     .then((val) => {
         console.log("Step 2:", val);   // 7
-        ans.textContent = val;
+        ans.textContent = `Result: ${val}`;
         return new Promise((resolve) => {
             setTimeout(() => resolve(val * 2), 1000); // 7*2 = 14
         });
     })
     .then((val) => {
         console.log("Step 3:", val);   // 14
-        ans.textContent = val;
+        ans.textContent = `Result: ${val}`;
         return new Promise((resolve) => {
             setTimeout(() => resolve(val - 3), 1000); // 14-3 = 11
         });
     })
     .then((val) => {
         console.log("Step 4:", val);   // 11
-        ans.textContent = val;
+        ans.textContent = `Result: ${val}`;
         return new Promise((resolve) => {
             setTimeout(() => resolve(val / 2), 1000); // 11/2 = 5.5
         });
     })
     .then((val) => {
         console.log("Step 5:", val);   // 5.5
-        ans.textContent = val;
+        ans.textContent = `Result: ${val}`;
         return new Promise((resolve) => {
             setTimeout(() => resolve(val + 10), 1000); // 5.5+10 = 15.5
         });
     })
     .then((val) => {
         console.log("Final:", val);    // 15.5
-        ans.textContent = val;
+        ans.textContent = `Final Result: ${val}`;
     })
     .catch((err) => console.log("Error:", err));
 }
